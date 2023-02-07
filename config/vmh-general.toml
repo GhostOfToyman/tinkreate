@@ -1,0 +1,137 @@
+
+["VMH Entities"]
+	#
+	#Determines what entities have their size modified by this mod, as well as their min, max, and median sizes.
+	#
+	#The median only does things for certain distribution values.
+	#
+	#If an entity doesn't work automatically, this list also works as a whitelist. There is also a Blacklist, and an Inverted Entity Whitelist
+	#
+	#Inverted values can be set which invert the Min and Max values of a dataset for a specific.
+	#
+	#**Values must be set as follows: 'minecraft/modId:name;vmhSizeMin;vmhSizeMax;vmhSizeMedian;vmhDistributionType'.**
+	#
+	vmhEntities = ["minecraft:allay;0.95;1.05;1;0", "minecraft:axolotl;0.95;1.05;1;0", "minecraft:bat;0.95;1.05;1;0", "minecraft:bee;0.95;1.05;1;0", "minecraft:blaze;0.95;1.05;1;0", "minecraft:cat;0.95;1.05;1;0", "minecraft:cave_spider;0.95;1.05;1;0", "minecraft:chicken;0.95;1.05;1;0", "minecraft:cod;0.95;1.05;1;0", "minecraft:cow;0.95;1.05;1;0", "minecraft:creeper;0.95;1.05;1;0", "minecraft:dolphin;0.95;1.05;1;0", "minecraft:donkey;0.95;1.05;1;0", "minecraft:drowned;0.95;1.05;1;0", "minecraft:enderman;0.95;1.05;1;0", "minecraft:evoker;0.95;1.05;1;0", "minecraft:fox;0.95;1.05;1;0", "minecraft:frog;0.95;1.05;1;0", "minecraft:ghast;0.95;1.05;1;0", "minecraft:glow_squid;0.95;1.05;1;0", "minecraft:goat;0.95;1.05;1;0", "minecraft:guardian;0.95;1.05;1;0", "minecraft:hoglin;0.95;1.05;1;0", "minecraft:horse;0.95;1.05;1;0", "minecraft:husk;0.95;1.05;1;0", "minecraft:illusioner;0.95;1.05;1;0", "minecraft:iron_golem;0.95;1.05;1;0", "minecraft:llama;0.95;1.05;1;0", "minecraft:magma_cube;0.95;1.05;1;0", "minecraft:mooshroom;0.95;1.05;1;0", "minecraft:mule;0.95;1.05;1;0", "minecraft:ocelot;0.95;1.05;1;0", "minecraft:panda;0.95;1.05;1;0", "minecraft:parrot;0.95;1.05;1;0", "minecraft:phantom;0.95;1.05;1;0", "minecraft:pig;0.95;1.05;1;0", "minecraft:piglin_brute;0.95;1.05;1;0", "minecraft:pillager;0.95;1.05;1;0", "minecraft:polar_bear;0.95;1.05;1;0", "minecraft:pufferfish;0.95;1.05;1;0", "minecraft:rabbit;0.95;1.05;1;0", "minecraft:ravager;0.95;1.05;1;0", "minecraft:salmon;0.95;1.05;1;0", "minecraft:sheep;0.95;1.05;1;0", "minecraft:shulker;0.95;1.05;1;0", "minecraft:silverfish;0.95;1.05;1;0", "minecraft:skeleton;0.95;1.05;1;0", "minecraft:slime;0.7;1.05;3;0", "minecraft:snow_golem;0.95;1.05;1;0", "minecraft:spider;0.8;1.2;1;0", "minecraft:squid;0.95;1.05;1;0", "minecraft:stray;0.95;1.05;1;0", "minecraft:strider;0.95;1.05;1;0", "minecraft:tadpole;0.95;1.05;1;0", "minecraft:trader_llama;0.95;1.05;1;0", "minecraft:tropical_fish;0.95;1.05;1;0", "minecraft:turtle;0.95;1.05;1;0", "minecraft:vex;0.95;1.05;1;0", "minecraft:villager;0.952;1.08;1;0", "minecraft:vindicator;0.95;1.05;1;0", "minecraft:wandering_trader;0.952;1.08;1;0", "minecraft:witch;0.95;1.05;1;0", "minecraft:wither_skeleton;0.95;1.05;1;0", "minecraft:wolf;0.95;1.05;1;0", "minecraft:zoglin;0.95;1.05;1;0", "minecraft:zombie;0.95;1.05;1;0", "minecraft:zombie_horse;0.95;1.05;1;0", "minecraft:zombie_villager;0.95;1.05;1;0", "minecraft:zombified_piglin;0.95;1.05;1;0"]
+
+["VMH Entities Blacklist"]
+	#
+	#Determines what entities are blacklist to be used by this mod.
+	#
+	vmhEntitiesBlacklist = ["minecraft:ender_dragon", "minecraft:wither", "minecraft:warden"]
+
+["VMH Entities Inverted Whitelist"]
+	#
+	#Determines what entities are allowed to have their values inverted by this mod.
+	#
+	vmhEntitiesInvertedWhitelist = [""]
+
+["VMH Entity Tags"]
+	#
+	#Determines what entity tags are to be used by this mod.
+	#
+	vmhEntityTags = ["vmh:default_size;0.95;1.05;1;0"]
+
+["Default Spawn Size/Distribution Values"]
+	#
+	#Determines the default min, max, and median size values a mob can be.
+	#
+	#The median value sets where the middle of the distribution is set.
+	#
+	#**Default values: Min=0.8, Max=1,2, Median=1, Distribution=0. Default values will only be used if an entity does not have them set in the config.**
+	#
+	#**More info on distributions can be found on the mod's page on curseforge.**
+	#
+	#*WARNING: Extreme values can cause issues and lag. *
+	#
+	#Range: 0.01 ~ 5.0
+	vmhSizeMax = 1.05
+	#Range: 0.01 ~ 5.0
+	vmhSizeMin = 0.95
+	#Range: 0.01 ~ 5.0
+	vmhSizeMedian = 1.0
+	#
+	#Determines the type of distribution to use on entities.
+	#
+	#Range: 0 ~ 4
+	vmhDistributionType = 0
+
+["Buff Health"]
+	#
+	#Determines whether or not to buff/debuff entity health by their size value.
+	#
+	vmhBuffHealth = true
+
+["Buff Speed"]
+	#
+	#Determines whether or not to buff/debuff entity movement/flying speed by their size value.
+	#
+	vmhBuffSpeed = false
+
+["Buff Attack Damage"]
+	#
+	#Determines whether or not to buff/debuff entity attack damage by their size value.
+	#
+	vmhBuffAttackDamage = true
+
+["Buff Attack Speed"]
+	#
+	#Determines whether or not to buff/debuff entity attack speed by their size value.
+	#
+	vmhBuffAttackSpeed = false
+
+["Buff Attack Knockback"]
+	#
+	#Determines whether or not to buff/debuff entity knockback by their size value.
+	#
+	vmhBuffKnockback = true
+
+["Buff Defense"]
+	#
+	#Determines whether Aor not to buff/debuff entity defense by their size value.
+	#
+	vmhBuffDefense = false
+
+["Modify Jump/Step Height"]
+	#
+	#Determines whether or not to modify entity jump height/step height by their size value.
+	#
+	#WARNING: Be careful turning this on, it can cause mobs to have serious issues. It depends on the heights.
+	#
+	vmhBuffJumpHeight = false
+
+["Buff Horse Jump Height"]
+	#
+	#Determines whether or not to modify horse jump heights.
+	#
+	vmhBuffHorseJumpHeight = true
+
+["Inverse Speed Value"]
+	#
+	#Determines whether or not to invert only speed values based on size (True means bigger entities move slower)(Inverts Speed and Attack Speed ).
+	#
+	vmhInverseSpeedValue = true
+
+["Inverse Health Value"]
+	#
+	#Determines whether or not to invert only health values based on size except speed (Inverts Health Only).
+	#
+	v = true
+
+["Inverse Size Value"]
+	#
+	#Determines whether or not to invert only base size values based on size except speed (Inverts Height and Width Only).
+	#
+	vmhInverseSizeValue = true
+
+["Inverse Value"]
+	#
+	#Determines whether or not to invert all other invertible values based on size (Inverts Jump Height, Attack, Defense, and Knockback ).
+	#
+	vmhInverseValue = true
+
+["Do Auto-Compatibility"]
+	#
+	#Enables/disables auto-compatibility with mobs/creatures.
+	#
+	vmhDoAutoCompat = true
+
